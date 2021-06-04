@@ -25,7 +25,7 @@ body {
     display: grid;
     grid-auto-flow: row;
     justify-content: center;
-    align-content: start;
+    align-content: center;
     padding: 8.2rem 2.4rem 0 2.4rem;
     background-image:
         url(../images/bg-pattern-top-mobile.svg),
@@ -38,6 +38,7 @@ body {
     display: grid;
     grid-auto-flow: row;
     row-gap: 1.6rem;
+    max-width: 620px;
 }
 
 .header {
@@ -70,6 +71,18 @@ body {
     text-align: center;
 }
 
+.ratings .ratings__block:nth-child(1) {
+    justify-self: start;
+}
+
+.ratings .ratings__block:nth-child(2) {
+    justify-self: center;
+}
+
+.ratings .ratings__block:nth-child(3) {
+    justify-self: end;
+}
+
 .ratings__block {
     display: grid;
     grid-auto-flow: row;
@@ -78,6 +91,7 @@ body {
     background-color: var(--buyer-text-color);
     border-radius: 5px;
     height: 78px;
+    min-width: 327px;
 }
 
 .ratings__block__stars {
@@ -92,6 +106,13 @@ body {
     font-weight: 700;
     line-height: 2.4rem;
     color: var(--card-bg-color);
+}
+
+.buyer-wrapper {
+    display: grid;
+    grid-auto-flow: row;
+    justify-content: stretch;
+    row-gap: 1.6rem;
 }
 
 .buyer {
@@ -122,13 +143,14 @@ body {
 .buyer__info__name {
     grid-area: name;
     font-size: 1.3rem;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .buyer__info__verified {
     grid-area: verified;
     font-size: 1.3rem;
     color: var(--verified-color);
+    opacity: 0.7;
 }
 
 .buyer__text {
@@ -139,5 +161,80 @@ body {
 .attribution {
     height: 3rem;
     font-size: 1.2rem;
-    padding: 2rem;
+    padding: 2.6rem;
+    text-align: center;
+}
+
+@media (min-width: 600px)
+{
+    .ratings__block {
+        grid-auto-flow: column;
+        max-width: 445px;
+        height: 55px;
+    }
+}
+
+@media (min-width: 1200px)
+{
+   
+    .social-proof {
+        max-width: unset;
+        min-height: 580px;
+        width: 1110px;
+        grid-auto-flow: unset;
+        grid-template-columns: 440px 540px;
+        column-gap: 130px;
+        row-gap: 4.8rem;
+        grid-template-areas: "header ratings"
+                            "buyer buyer";
+
+    }
+
+    .header {
+        grid-area: header;
+        justify-self: start;
+        text-align: left;
+        align-self: start;
+        row-gap: 2rem;
+    }
+
+    .header__heading {
+        font-size: 4.8rem;
+    }
+
+    .ratings {
+        grid-area: ratings;
+        justify-self: stretch;
+    }
+
+    .ratings__block {
+        width: 445px;
+    }
+
+    .ratings__block__text {
+        justify-self: start;
+    }
+
+    .buyer-wrapper {
+        grid-area: buyer;
+        grid-auto-flow: column;
+        column-gap: 3rem;
+        justify-content: stretch;
+        min-height: 265px;
+    }
+    .buyer {
+        padding-bottom: 3.8rem;
+    }
+    .buyer-wrapper .buyer:nth-child(1) {
+        align-self: start;
+    }
+    
+    .buyer-wrapper .buyer:nth-child(2) {
+        align-self: center;
+    }
+    
+    .buyer-wrapper .buyer:nth-child(3) {
+        align-self: end;
+    }
+
 }
