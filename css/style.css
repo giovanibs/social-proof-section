@@ -25,7 +25,7 @@ body {
     display: grid;
     grid-auto-flow: row;
     justify-content: center;
-    align-content: center;
+    align-content: start;
     padding: 8.2rem 2.4rem 0 2.4rem;
     background-image:
         url(../images/bg-pattern-top-mobile.svg),
@@ -43,25 +43,27 @@ body {
 .header {
     display: grid;
     grid-auto-flow: row;
-    row-gap: 2rem;
+    row-gap: 2.5rem;
     text-align: center;
     padding: 0 0.5rem;
 }
 
 .header__heading {
-    font-size: 3rem;
+    font-size: 3.1rem;
     font-weight: 700;
+    line-height: 100%;
     color: var(--card-bg-color);
 }
 
 .header__text {
     font-size: 1.4rem;
-    line-height: 2rem;
+    font-weight: 500;
+    line-height: 2.5rem;
     color: var(--header-text-color);
 }
 
 .ratings {
-    margin-top: 3.1rem;
+    margin-top: 2.4rem;
     margin-bottom: 3.3rem;
     display: grid;
     row-gap: 1.6rem;
@@ -72,7 +74,6 @@ body {
     display: grid;
     grid-auto-flow: row;
     justify-items: center;
-    align-items: center;
     align-content: center;
     background-color: var(--buyer-text-color);
     border-radius: 5px;
@@ -94,10 +95,12 @@ body {
 }
 
 .buyer {
+    display: grid;
+    grid-auto-flow: row;
     background-color: var(--card-bg-color);
     color: var(--buyer-text-color);
-    padding: 3.8rem 3.3rem 3.8rem 3rem ;
-    border-radius: 1rem;
+    padding: 4rem 2.5rem 2.9rem 3.2rem;
+    border-radius: 0.8rem;
 }
 
 .buyer__info {
@@ -106,24 +109,25 @@ body {
                          "image verified";
     justify-content: start;
     align-items: center;
-    column-gap: 2rem;
-    margin-bottom: 3rem;
+    column-gap: 2.2rem;
+    margin-bottom: 2.8rem;
 }
 
 .buyer__info__img {
     grid-area: image;
-    height: 4.1rem;
+    height: 4rem;
     border-radius: 50%;
 }
 
 .buyer__info__name {
     grid-area: name;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 500;
 }
 
 .buyer__info__verified {
     grid-area: verified;
+    font-size: 1.3rem;
     color: var(--verified-color);
 }
 
