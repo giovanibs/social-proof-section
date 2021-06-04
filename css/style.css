@@ -159,9 +159,10 @@ body {
 }
 
 .attribution {
-    height: 3rem;
+    min-height: 3rem;
     font-size: 1.2rem;
-    padding: 2.6rem;
+    margin-top: 2.6rem;
+    margin-bottom: 2.6rem;
     text-align: center;
 }
 
@@ -176,7 +177,11 @@ body {
 
 @media (min-width: 1200px)
 {
-   
+   body {
+    background-image: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop.svg);
+    
+   }
+
     .social-proof {
         max-width: unset;
         min-height: 580px;
