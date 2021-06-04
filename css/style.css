@@ -26,7 +26,7 @@ body {
     grid-auto-flow: row;
     justify-content: center;
     align-content: center;
-    padding: 5rem;
+    padding: 8.2rem 2.4rem 0 2.4rem;
     background-image:
         url(../images/bg-pattern-top-mobile.svg),
         url(../images/bg-pattern-bottom-mobile.svg);
@@ -45,16 +45,18 @@ body {
     grid-auto-flow: row;
     row-gap: 2rem;
     text-align: center;
+    padding: 0 0.5rem;
 }
 
 .header__heading {
-    font-size: 2.6rem;
+    font-size: 3rem;
     font-weight: 700;
     color: var(--card-bg-color);
 }
 
 .header__text {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    line-height: 2rem;
     color: var(--header-text-color);
 }
 
@@ -85,7 +87,7 @@ body {
 }
 
 .ratings__block__text {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 700;
     line-height: 2.4rem;
     color: var(--card-bg-color);
@@ -94,20 +96,44 @@ body {
 .buyer {
     background-color: var(--card-bg-color);
     color: var(--buyer-text-color);
-    padding: 3.8rem 3.3rem;
+    padding: 3.8rem 3.3rem 3.8rem 3rem ;
     border-radius: 1rem;
 }
 
-.buyer__name {
+.buyer__info {
+    display: grid;
+    grid-template-areas: "image name"
+                         "image verified";
+    justify-content: start;
+    align-items: center;
+    column-gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.buyer__info__img {
+    grid-area: image;
+    height: 4.1rem;
+    border-radius: 50%;
+}
+
+.buyer__info__name {
+    grid-area: name;
     font-size: 1.2rem;
     font-weight: 500;
 }
 
-.buyer__verified {
+.buyer__info__verified {
+    grid-area: verified;
     color: var(--verified-color);
 }
 
 .buyer__text {
+    font-size: 1.3rem;
+    line-height: 2.2rem;
+}
+
+.attribution {
+    height: 3rem;
     font-size: 1.2rem;
-    line-height: 2rem;
+    padding: 2rem;
 }
